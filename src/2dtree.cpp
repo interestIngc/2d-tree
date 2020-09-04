@@ -5,12 +5,26 @@
 #include <queue>
 using namespace kdtree;
 
+
+class Comp {
+private:
+    size_t coord;
+public:
+    explicit Comp(size_t coord) : coord(coord) {}
+
+    bool operator() (const Point& p1, const Point& p2) {
+        return p1.coords[coord] < p2.coords[coord];
+    }
+};
+
 std::size_t PointSet :: size() const {
     return size_;
 }
+
 bool PointSet ::empty() const {
     return size_ == 0;
 }
+
 void PointSet::report(Node * a,  std::vector<Point> & ans) const {
     if (a == nullptr) {
         return;
@@ -44,6 +58,7 @@ void PointSet ::get_range(Node * a, const Rect &rect, std::vector<Point> & ans) 
         }
     }
 }
+
 std::pair<PointSet::ForwardIt, PointSet::ForwardIt> PointSet :: range(const Rect & rect) const {
     std::vector<Point> ans;
     get_range(root_.get(), rect, ans);
@@ -99,6 +114,7 @@ void PointSet::put(const Point & pt) {
         }
     }
 }
+
 Rect PointSet::update(PointSet::Node * currNode) const {
     double xmin0 = currNode->point.x();
     double xmax0 = currNode->point.x();
@@ -128,6 +144,7 @@ void PointSet::recalc(PointSet::Node * curr_node) {
     curr_node->rect = update(curr_node);
     return recalc(curr_node);
 }
+
 void PointSet::get_nearest_neighbour(const PointSet::Node* current_node, const Point & key,
                                      std::priority_queue<std::pair<double, Point>, std::vector<std::pair<double, Point>>, cmp> & rev_queue, size_t k) const {
     if (current_node == nullptr) return;
@@ -145,21 +162,23 @@ void PointSet::get_nearest_neighbour(const PointSet::Node* current_node, const P
         get_nearest_neighbour(current_node->right.get(), key, rev_queue, k);
         is_left = false;
     }
-
     if (rev_queue.size() < k || fabs(key.coords[curr_level % 2] - curr_point.coords[curr_level % 2]) < rev_queue.top().first) {
-        if (is_left) get_nearest_neighbour(current_node->right.get(), key, rev_queue, k);
-        else get_nearest_neighbour(current_node->left.get(), key, rev_queue, k);
+        if (is_left) {
+            get_nearest_neighbour(current_node->right.get(), key, rev_queue, k);
+        } else  {
+            get_nearest_neighbour(current_node->left.get(), key, rev_queue, k);
+        }
     }
 }
 
 std::optional<Point> PointSet::nearest(const Point & key) const {
-    auto q = nearest(key, 1);
-    if (q.second == q.first) {
+    auto p = nearest(key, 1);
+    if (p.second == p.first) {
         return std::nullopt;
     }
-    Point res = q.first.node->point;
-    return res;
+    return p.first.node->point;
 }
+
 std::pair<PointSet::ForwardIt, PointSet::ForwardIt> PointSet::nearest(const Point & key,
                                                                       std::size_t k) const {
     cmp comp;
@@ -178,19 +197,12 @@ std::pair<PointSet::ForwardIt, PointSet::ForwardIt> PointSet::nearest(const Poin
 
 std::unique_ptr<PointSet::Node> PointSet::build_tree(std::vector<Point>::iterator start,
                                                      std::vector<Point>::iterator end, int curr_level, Node * parent) const {
-    if (start >= end) return nullptr;
-    int axis = curr_level % 2;
-    auto cmp = [axis](const Point& p1, const Point& p2) {
-        return p1.coords[axis] < p2.coords[axis];
-    };
-    std::size_t len = end - start;
-    auto mid = start + len / 2;
-    std::nth_element(start, mid, end, cmp);
-    while (mid > start && (mid - 1)->coords[axis] == mid->coords[axis]) {
-        --mid;
+    if (start >= end) {
+        return nullptr;
     }
-    Point pt = *mid;
-    auto new_node = std::make_unique<Node>(pt, curr_level, Rect(pt, pt), parent);
+    auto mid = start + (end - start) / 2;
+    std::nth_element(start, mid, end, Comp(curr_level % 2));
+    auto new_node = std::make_unique<Node>(*mid, curr_level, Rect(*mid, *mid), parent);
     new_node->left = build_tree(start, mid, curr_level + 1, new_node.get());
     new_node->right = build_tree(mid + 1, end, curr_level + 1, new_node.get());
     new_node->rect = update(new_node.get());
