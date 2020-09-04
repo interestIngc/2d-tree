@@ -1,0 +1,2 @@
+C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\ar.exe qc lib2d_tree_lib.a  CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj
+C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\ranlib.exe lib2d_tree_lib.a

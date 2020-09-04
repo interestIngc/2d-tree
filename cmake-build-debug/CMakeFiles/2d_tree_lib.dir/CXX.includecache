@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/primitives.h
+iostream
+-
+cmath
+-
+map
+-
+algorithm
+-
+optional
+-
+memory
+-
+utility
+-
+vector
+-
+set
+-
+queue
+-
+type_traits
+-
+
+C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/2dtree.cpp
+primitives.h
+C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/primitives.h
+vector
+-
+unordered_set
+-
+functional
+-
+queue
+-
+
