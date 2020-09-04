@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Veronika/Desktop/report/2d-tree/src/main.cpp" "C:/Users/Veronika/Desktop/report/2d-tree/cmake-build-debug/CMakeFiles/2d_tree.dir/src/main.cpp.obj"
+  "C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/main.cpp" "C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/cmake-build-debug/CMakeFiles/2d_tree.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "C:/Users/Veronika/Desktop/report/2d-tree/cmake-build-debug/CMakeFiles/2d_tree_lib.dir/DependInfo.cmake"
+  "C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/cmake-build-debug/CMakeFiles/2d_tree_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

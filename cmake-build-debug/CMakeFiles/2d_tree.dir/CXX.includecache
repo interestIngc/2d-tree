@@ -30,15 +30,9 @@ queue
 type_traits
 -
 
-C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/2dtree.cpp
+C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/main.cpp
 primitives.h
 C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/primitives.h
-vector
--
-unordered_set
--
-functional
--
-queue
+iostream
 -
 

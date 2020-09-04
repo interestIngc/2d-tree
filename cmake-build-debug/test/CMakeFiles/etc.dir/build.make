@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Veronika\Desktop\report\2d-tree
+CMAKE_SOURCE_DIR = C:\Users\Veronika\Desktop\report\2d-tree-interestIngc
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug
 
 # Utility rule file for etc.
 
@@ -62,8 +62,8 @@ test/etc/test0.dat: ../test/etc/test0.dat
 test/etc/test0.dat: ../test/etc/test1.dat
 test/etc/test0.dat: ../test/etc/test2.dat
 test/etc/test0.dat: ../test/etc/test2.dat.balanced
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying test data"
-	cd /d C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\test && "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E copy_directory C:/Users/Veronika/Desktop/report/2d-tree/test/etc C:/Users/Veronika/Desktop/report/2d-tree/cmake-build-debug/test/etc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying test data"
+	cd /d C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\test && "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E copy_directory C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/test/etc C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/cmake-build-debug/test/etc
 
 test/etc/test1.dat: test/etc/test0.dat
 	@$(CMAKE_COMMAND) -E touch_nocreate test\etc\test1.dat
@@ -89,10 +89,10 @@ test/CMakeFiles/etc.dir/build: etc
 .PHONY : test/CMakeFiles/etc.dir/build
 
 test/CMakeFiles/etc.dir/clean:
-	cd /d C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\test && $(CMAKE_COMMAND) -P CMakeFiles\etc.dir\cmake_clean.cmake
+	cd /d C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\test && $(CMAKE_COMMAND) -P CMakeFiles\etc.dir\cmake_clean.cmake
 .PHONY : test/CMakeFiles/etc.dir/clean
 
 test/CMakeFiles/etc.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Veronika\Desktop\report\2d-tree C:\Users\Veronika\Desktop\report\2d-tree\test C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\test C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\test\CMakeFiles\etc.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Veronika\Desktop\report\2d-tree-interestIngc C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\test C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\test C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\test\CMakeFiles\etc.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/etc.dir/depend
 

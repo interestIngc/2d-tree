@@ -141,7 +141,12 @@ public:
                contains(Point(other.xmax(), other.ymax())) || contains(Point(other.xmin(), other.ymin()));
     }
 };
-
+class cmp {
+public:
+    bool operator()(std::pair<double, Point> p1, std::pair<double, Point> p2) {
+        return p1.first < p2.first;
+    }
+};
 class iterator;
 namespace rbtree {
 
@@ -361,13 +366,14 @@ namespace kdtree {
         std::shared_ptr<Node> root_;
 
         using ForwardIt = NodeIterate;
+
         bool empty() const;
         std::size_t size() const;
         void put(const Point &);
         bool contains(const Point &) const;
 
-        std::pair<ForwardIt, ForwardIt> range(const Rect & rect) const;
-        ForwardIt begin() const {
+        [[nodiscard]] std::pair<ForwardIt, ForwardIt> range(const Rect & rect) const;
+        [[nodiscard]] ForwardIt begin() const {
             if (root_ != nullptr) {
                 Node * cur = root_.get();
                 while (cur->left != nullptr || cur->right != nullptr) {
@@ -382,12 +388,12 @@ namespace kdtree {
                 return end();
             }
         }
-        ForwardIt end() const {
+        [[nodiscard]] ForwardIt end() const {
             return NodeIterate(nullptr);
         }
 
-        std::optional<Point> nearest(const Point &) const;
-        std::pair<ForwardIt, ForwardIt> nearest(const Point &, std::size_t) const;
+        [[nodiscard]] std::optional<Point> nearest(const Point &) const;
+        [[nodiscard]] std::pair<ForwardIt, ForwardIt> nearest(const Point &, std::size_t) const;
 
         friend std::ostream & operator << (std::ostream & out, const PointSet & ps) {
             for (auto it = ps.begin(); it != ps.end(); ++it) {
@@ -396,19 +402,17 @@ namespace kdtree {
             return out;
         }
     private:
-        class cmp {
-        public:
-            bool operator()(std::pair<double, Point> p1, std::pair<double, Point> p2) {
-                return p1.first < p2.first;
-            }
-        };
         std::size_t size_ = 0;
         Node * find_node(Node * curr_node, const Point & pt) const;
         void get_nearest_neighbour(const Node* current_node, const Point & key, std::priority_queue<std::pair<double, Point>, std::vector<std::pair<double, Point>>, cmp> & rev_queue, size_t k) const;
         std::unique_ptr<Node> build_tree(std::vector<Point>::iterator start, std::vector<Point>::iterator end, int curr_level, Node *parent) const;
+
         void report(Node * a, std::vector<Point> &ans) const;
+
         void get_range(Node * a, const Rect &rect, std::vector<Point> &ans) const;
+
         void recalc(Node * curr_node);
+
         Rect update(Node *currNode) const;
     };
 
