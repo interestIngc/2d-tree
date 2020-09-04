@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/src/2dtree.cpp" "C:/Users/Veronika/Desktop/report/2d-tree-interestIngc/cmake-build-debug/CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj"
+  "C:/Users/Veronika/Desktop/report/2d-tree/src/2dtree.cpp" "C:/Users/Veronika/Desktop/report/2d-tree/cmake-build-debug/CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

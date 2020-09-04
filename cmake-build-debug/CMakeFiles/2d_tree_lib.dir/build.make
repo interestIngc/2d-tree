@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.4\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Veronika\Desktop\report\2d-tree-interestIngc
+CMAKE_SOURCE_DIR = C:\Users\Veronika\Desktop\report\2d-tree
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/2d_tree_lib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/2d_tree_lib.dir/flags.make
 CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj: CMakeFiles/2d_tree_lib.dir/flags.make
 CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj: CMakeFiles/2d_tree_lib.dir/includes_CXX.rsp
 CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj: ../src/2dtree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj"
-	C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2d_tree_lib.dir\src\2dtree.cpp.obj -c C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\src\2dtree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj"
+	C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\2d_tree_lib.dir\src\2dtree.cpp.obj -c C:\Users\Veronika\Desktop\report\2d-tree\src\2dtree.cpp
 
 CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.i"
-	C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\src\2dtree.cpp > CMakeFiles\2d_tree_lib.dir\src\2dtree.cpp.i
+	C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Veronika\Desktop\report\2d-tree\src\2dtree.cpp > CMakeFiles\2d_tree_lib.dir\src\2dtree.cpp.i
 
 CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.s"
-	C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\src\2dtree.cpp -o CMakeFiles\2d_tree_lib.dir\src\2dtree.cpp.s
+	C:\Users\Veronika\Desktop\51A2~1\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Veronika\Desktop\report\2d-tree\src\2dtree.cpp -o CMakeFiles\2d_tree_lib.dir\src\2dtree.cpp.s
 
 # Object files for target 2d_tree_lib
 2d_tree_lib_OBJECTS = \
@@ -80,7 +80,7 @@ CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.s: cmake_force
 lib2d_tree_lib.a: CMakeFiles/2d_tree_lib.dir/src/2dtree.cpp.obj
 lib2d_tree_lib.a: CMakeFiles/2d_tree_lib.dir/build.make
 lib2d_tree_lib.a: CMakeFiles/2d_tree_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library lib2d_tree_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library lib2d_tree_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\2d_tree_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\2d_tree_lib.dir\link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/2d_tree_lib.dir/clean:
 .PHONY : CMakeFiles/2d_tree_lib.dir/clean
 
 CMakeFiles/2d_tree_lib.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Veronika\Desktop\report\2d-tree-interestIngc C:\Users\Veronika\Desktop\report\2d-tree-interestIngc C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug C:\Users\Veronika\Desktop\report\2d-tree-interestIngc\cmake-build-debug\CMakeFiles\2d_tree_lib.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Veronika\Desktop\report\2d-tree C:\Users\Veronika\Desktop\report\2d-tree C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug C:\Users\Veronika\Desktop\report\2d-tree\cmake-build-debug\CMakeFiles\2d_tree_lib.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/2d_tree_lib.dir/depend
 
